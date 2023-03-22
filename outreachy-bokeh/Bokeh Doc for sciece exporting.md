@@ -21,14 +21,14 @@ There are two major ways to pass your dataset to bokeh plots:
 	
 		from bokeh.models import ColumnDataSource
 
-		source = ColumnDataSource(temp_df)
+		source = ColumnDataSource(df)
 
 		plot.line('Year', 'Selling_Price', line_width=2)
 
 2. Directly referencing the dataset feature using square bracket 
 
     
-	    plot.line(temp_df['Year'], temp_df['Selling_Price'], line_width=2)
+	    plot.line(df['Year'], df['Selling_Price'], line_width=2)
 	    show(plot)
 
 
