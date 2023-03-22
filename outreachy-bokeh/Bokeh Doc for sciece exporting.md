@@ -21,28 +21,14 @@ There are two major ways to pass your dataset to bokeh plots:
 	
 		from bokeh.models import ColumnDataSource
 
-		temp_df = df.groupby(['Year']).sum().reset_index()
 		source = ColumnDataSource(temp_df)
 
-		plot = figure(title='Selling Price Over the Years', height=400, width=800)
-		plot.xaxis.axis_label = 'Year'
-		plot.yaxis.axis_label = 'Total Selling Price'
 		plot.line('Year', 'Selling_Price', line_width=2)
-		plot.circle('Year', 'Selling_Price', line_width=3)
-		plot.yaxis.formatter = NumeralTickFormatter(format='0,0')
-		show(plot)
 
 2. Directly referencing the dataset feature using square bracket 
 
     
-	    temp_df = df.groupby(['Year']).sum().reset_index()
-
-	    plot = figure(title='Selling Price Over the Years', height=400, width=800)
-	    plot.xaxis.axis_label = 'Year'
-	    plot.yaxis.axis_label = 'Total Selling Price'
 	    plot.line(temp_df['Year'], temp_df['Selling_Price'], line_width=2)
-	    plot.circle(temp_df['Year'], temp_df['Selling_Price'], line_width=3)
-	    plot.yaxis.formatter = NumeralTickFormatter(format='0,0')
 	    show(plot)
 
 
