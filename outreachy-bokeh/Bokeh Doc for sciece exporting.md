@@ -9,7 +9,7 @@ Bokeh provides two methods for exporting static plots in PNG or SVG format:
 - `export_svgs()`
 
 > These methods allow you to specify the size of the exported plot and the resolution (in dots per inch) as well as the background fill color to ensure that your plots are aesthetically pleasing.
-The default export setting is `export_png()` and requires no backend setting. Hoever, to use the `export_svgs()` successfully, the SVG backend needs to be activated by setting the 
+The default export setting is `export_png()` and requires no backend setting. However, to use the `export_svgs()` successfully, the SVG backend needs to be activated by setting the 
 `Plot.output_backend` attribute to "svg"
 
 ### How to pass your data with bokeh
